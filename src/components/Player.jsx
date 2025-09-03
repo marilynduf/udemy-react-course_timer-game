@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useRef } from "react";
+import { useState, useRef } from "react";
+
 export default function Player() {
     const playerName = useRef();
     const [playerNameValue, setPlayerNameValue] = useState(null);
