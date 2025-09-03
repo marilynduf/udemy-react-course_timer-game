@@ -1,16 +1,20 @@
 import Player from "./components/Player.jsx";
 import TimerChallenge from "./components/TimerChallenge.jsx";
+import { CHALLENGES_DATA } from "./challenges-data.js";
 
 function App() {
     return (
         <>
             <Player />
             <div id="challenges">
-                {}
-                <TimerChallenge title="Easy" targetTime={1} />
-                <TimerChallenge title="Not that Easy" targetTime={5} />
-                <TimerChallenge title="Getting tough" targetTime={10} />
-                <TimerChallenge title="Pro Only" targetTime={15} />
+                {CHALLENGES_DATA.map((challenge) => {
+                    return (
+                        <TimerChallenge
+                            title={challenge.title}
+                            targetTime={challenge.targetTime}
+                        />
+                    );
+                })}
             </div>
         </>
     );
