@@ -10,6 +10,7 @@ function App() {
                 {CHALLENGES_DATA.map((challenge) => {
                     return (
                         <TimerChallenge
+                            key={challenge.targetTime}
                             title={challenge.title}
                             targetTime={challenge.targetTime}
                         />
