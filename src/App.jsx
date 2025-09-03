@@ -11,8 +11,7 @@ function App() {
                     return (
                         <TimerChallenge
                             key={challenge.targetTime}
-                            title={challenge.title}
-                            targetTime={challenge.targetTime}
+                            {...challenge}
                         />
                     );
                 })}
