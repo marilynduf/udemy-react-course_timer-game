@@ -1,6 +1,6 @@
-export default function ResultModal({ result, targetTime, timerExpired }) {
+export default function ResultModal({ ref, result, targetTime }) {
     return (
-        <dialog className="result-modal">
+        <dialog ref={ref} className="result-modal">
             <h2>You {result}</h2>
             <p>
                 <strong>{targetTime}</strong>
